@@ -1,0 +1,671 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="stylesheet" href="KP.css">
+    <link rel="stylesheet" href="KP.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Khpalwak Mobiles — Premium phones, tablets, laptops, audio and accessories in Afghanistan.">
+  <title>Khpalwak Mobiles | خپلواک موبایل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<div class="noise"></div>
+<div id="toast"></div>
+
+<header class="header">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>🇦🇫 Afghanistan's premium technology destination</span>
+      <span>Same-day Kabul delivery • Warranty • Authentic products</span>
+    </div>
+  </div>
+
+  <nav class="nav container">
+    <a class="brand" href="#home">
+      <div class="brand-mark">
+        <span>K</span>
+        <i></i>
+      </div>
+      <div>
+        <strong>KHPALWAK</strong>
+        <small>خپلواک موبایل</small>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#products" data-i18n="navStore">Store</a>
+      <a href="#calculator" data-i18n="navCalculator">Calculator</a>
+      <a href="#community" data-i18n="navCommunity">Community</a>
+      <a href="#sales" data-i18n="navSales">Sales</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <select id="language" class="lang">
+        <option value="en">EN</option>
+        <option value="fa">دری</option>
+        <option value="ps">پښتو</option>
+      </select>
+
+      <button class="icon-btn" onclick="openSearch()">⌕</button>
+      <button class="cart-btn" onclick="openCart()">
+        🛒 <span id="cartCount">0</span>
+      </button>
+      <button class="menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#products">Store</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#community">Community</a>
+    <a href="#sales">Sales</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-orb orb-one"></div>
+  <div class="hero-orb orb-two"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-content reveal">
+      <div class="eyebrow">
+        <span class="pulse"></span>
+        <span data-i18n="heroEyebrow">Kabul • Afghanistan • Since 2000</span>
+      </div>
+
+      <h1>
+        <span data-i18n="heroTitle1">THE FUTURE</span>
+        <em data-i18n="heroTitle2">IS IN YOUR HAND.</em>
+      </h1>
+
+      <p data-i18n="heroText">
+        Discover authentic Apple, Samsung, Google, Xiaomi, OnePlus,
+        Sony, Huawei, OPPO and more — with premium service from Khpalwak.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-gold" data-i18n="shopNow">SHOP NOW</a>
+        <a href="#community" class="btn btn-outline" data-i18n="talkToUs">TALK TO US</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>10K+</strong><span data-i18n="happy">Happy Customers</span></div>
+        <div><strong>500+</strong><span data-i18n="products">Products</span></div>
+        <div><strong>50+</strong><span data-i18n="brands">Brands</span></div>
+        <div><strong>4.9</strong><span>★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="hero-device-wrap reveal">
+      <div class="hero-ring ring-one"></div>
+      <div class="hero-ring ring-two"></div>
+      <div class="hero-badge">KHPALWAK<br><small>PREMIUM</small></div>
+
+      <div class="hero-device">
+        <div class="device-camera">
+          <i></i><i></i><i></i>
+        </div>
+        <div class="device-logo"></div>
+        <div class="device-shine"></div>
+      </div>
+
+      <div class="floating-card fc-one">
+        <span>✦</span>
+        <div><strong>100%</strong><small>Authentic</small></div>
+      </div>
+
+      <div class="floating-card fc-two">
+        <span>⚡</span>
+        <div><strong>Same Day</strong><small>Kabul Delivery</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands-section">
+  <div class="container">
+    <p class="section-kicker">OFFICIAL PRODUCT CATEGORIES</p>
+    <div class="brands">
+      <button onclick="filterBrand('Apple')">APPLE</button>
+      <button onclick="filterBrand('Samsung')">SAMSUNG</button>
+      <button onclick="filterBrand('Google')">GOOGLE</button>
+      <button onclick="filterBrand('OnePlus')">ONEPLUS</button>
+      <button onclick="filterBrand('Xiaomi')">XIAOMI</button>
+      <button onclick="filterBrand('Huawei')">HUAWEI</button>
+      <button onclick="filterBrand('Sony')">SONY</button>
+      <button onclick="filterBrand('OPPO')">OPPO</button>
+      <button onclick="filterBrand('Accessories')">JBL / ANKER</button>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products-section section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-kicker" data-i18n="featured">FEATURED COLLECTION</p>
+        <h2 data-i18n="latest">Latest technology.<br><em>Beautifully selected.</em></h2>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="Apple">iPhone</button>
+        <button class="filter" data-filter="Samsung">Samsung</button>
+        <button class="filter" data-filter="Tablet">Tablet</button>
+        <button class="filter" data-filter="Laptop">Laptop</button>
+        <button class="filter" data-filter="Accessories">Accessories</button>
+      </div>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="container trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">✓</div>
+      <div><strong>100% Genuine</strong><span>Authenticity guaranteed</span></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">♢</div>
+      <div><strong>Full Warranty</strong><span>Manufacturer warranty</span></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">⚡</div>
+      <div><strong>Fast Delivery</strong><span>Same day in Kabul</span></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">↻</div>
+      <div><strong>Trade-In</strong><span>Trade your old device</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator" class="calculator-section section">
+  <div class="container calc-grid">
+
+    <div class="calc-copy">
+      <p class="section-kicker">SMART BUYING</p>
+      <h2 data-i18n="calcTitle">Know your budget.<br><em>Choose your device.</em></h2>
+      <p data-i18n="calcText">
+        Tell us how much you have. We'll show you what remains after
+        buying your dream device.
+      </p>
+
+      <div class="currency-box">
+        <button class="currency active" data-currency="USD">USD</button>
+        <button class="currency" data-currency="AFN">AFN</button>
+        <button class="currency" data-currency="GBP">GBP</button>
+        <span>1 USD ≈ 65 AFN</span>
+      </div>
+    </div>
+
+    <div class="calculator glass">
+      <div class="calc-row">
+        <label data-i18n="yourMoney">Your money</label>
+        <div class="input-money">
+          <span id="currencySymbol">$</span>
+          <input id="budget" type="number" placeholder="1000" value="1000">
+        </div>
+      </div>
+
+      <div class="calc-row">
+        <label data-i18n="choosePhone">Choose a device</label>
+        <select id="calcProduct"></select>
+      </div>
+
+      <div class="calc-result">
+        <span data-i18n="remaining">Money remaining</span>
+        <strong id="remaining">$0</strong>
+        <small id="calcMessage">You can afford this device.</small>
+      </div>
+
+      <button class="btn btn-gold full" onclick="calculateBudget()" data-i18n="calculate">
+        CALCULATE MY BUDGET
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="compare-section section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="section-kicker">DEVICE SCORE</p>
+        <h2>Which one deserves <em>your money?</em></h2>
+      </div>
+      <span class="live-tag">● LIVE SCORE</span>
+    </div>
+
+    <div id="scoreGrid" class="score-grid"></div>
+  </div>
+</section>
+
+<section id="community" class="community-section section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-kicker">KHPALWAK COMMUNITY</p>
+        <h2 data-i18n="communityTitle">Talk. Share. <em>Connect.</em></h2>
+      </div>
+      <div class="online">
+        <span></span>
+        <strong id="onlineCount">247</strong> online
+      </div>
+    </div>
+
+    <div class="community-grid">
+
+      <div class="chat-panel glass">
+        <div class="chat-header">
+          <div class="avatar">K</div>
+          <div>
+            <strong>Khpalwak Community</strong>
+            <small>● Live community chat</small>
+          </div>
+          <button onclick="openRegistration()">＋ Join</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+          <div class="chat-message">
+            <div class="avatar mini">A</div>
+            <div>
+              <strong>Ahmad</strong>
+              <span>Has anyone tested the iPhone 17 Pro camera?</span>
+              <small>2 min ago</small>
+            </div>
+          </div>
+
+          <div class="chat-message">
+            <div class="avatar mini gold">F</div>
+            <div>
+              <strong>Fatima</strong>
+              <span>I got my S25 Ultra from Khpalwak. Amazing service! ⭐</span>
+              <small>5 min ago</small>
+            </div>
+          </div>
+
+          <div class="chat-message">
+            <div class="avatar mini blue">M</div>
+            <div>
+              <strong>Mohammad</strong>
+              <span>Do you deliver to Mazar?</span>
+              <small>8 min ago</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-login-hint">
+          <span>🔒</span>
+          Register with your phone number to participate in chat.
+        </div>
+
+        <form id="chatForm" class="chat-input" onsubmit="sendMessage(event)">
+          <button type="button" onclick="document.getElementById('postImage').click()">📷</button>
+          <input id="postImage" type="file" accept="image/*" hidden>
+          <input id="messageInput" placeholder="Register to write a message..." disabled>
+          <button type="button" onclick="openRegistration()">➤</button>
+        </form>
+      </div>
+
+      <div class="registration glass">
+        <div class="register-icon">✦</div>
+        <p class="section-kicker">JOIN KHPALWAK</p>
+        <h3>Become part of<br>the community.</h3>
+        <p>
+          Register once and receive your unique 8-digit Khpalwak Community ID.
+        </p>
+
+        <button class="btn btn-gold full" onclick="openRegistration()">REGISTER NOW</button>
+
+        <div class="register-benefits">
+          <span>✓ 8-digit ID</span>
+          <span>✓ Chat</span>
+          <span>✓ Photo posts</span>
+          <span>✓ Product comments</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="social-strip">
+      <span>FOLLOW KHPALWAK</span>
+      <a href="https://www.facebook.com/Khpalwak.Mobiles786" target="_blank">f</a>
+      <a href="https://www.instagram.com/khpalwak_mobiless/" target="_blank">◎</a>
+      <a href="https://www.tiktok.com/@khpalwak_mobile786" target="_blank">♪</a>
+      <a href="https://t.me/khpalwakMobiles" target="_blank">✈</a>
+      <a href="https://wa.me/93788886988" target="_blank">◉</a>
+    </div>
+  </div>
+</section>
+
+<section id="sales" class="sales-section section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-kicker">BUSINESS ANALYTICS</p>
+        <h2>Sales <em>dashboard.</em></h2>
+      </div>
+      <span class="live-tag">● LIVE DATABASE VIEW</span>
+    </div>
+
+    <div class="sales-stats">
+      <div class="sales-stat">
+        <span>Total sales</span>
+        <strong id="totalSales">$0</strong>
+        <small>Last 30 days</small>
+      </div>
+      <div class="sales-stat">
+        <span>Products sold</span>
+        <strong id="productsSold">0</strong>
+        <small>All categories</small>
+      </div>
+      <div class="sales-stat">
+        <span>Orders</span>
+        <strong id="ordersCount">0</strong>
+        <small>Processed orders</small>
+      </div>
+      <div class="sales-stat">
+        <span>Average order</span>
+        <strong id="averageOrder">$0</strong>
+        <small>Per order</small>
+      </div>
+    </div>
+
+    <div class="sales-table-wrap glass">
+      <div class="table-head">
+        <h3>Recent transactions</h3>
+        <select id="salesFilter">
+          <option>All sales</option>
+          <option>iPhone</option>
+          <option>Samsung</option>
+          <option>Accessories</option>
+        </select>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Price USD</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="salesTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<section class="delivery-section section">
+  <div class="container delivery-grid">
+
+    <div class="delivery-art">
+      <div class="delivery-phone">📦</div>
+      <div class="delivery-light"></div>
+    </div>
+
+    <div>
+      <p class="section-kicker">KHPALWAK DELIVERY</p>
+      <h2>From our store<br><em>to their door.</em></h2>
+      <p>
+        Buying a phone for your family in Kabul while you're in London?
+        No problem. Select the device, enter the recipient's information,
+        choose delivery and complete your payment.
+      </p>
+
+      <div class="delivery-features">
+        <div>🇦🇫 <strong>Afghanistan</strong><span>Same-day Kabul delivery</span></div>
+        <div>🌍 <strong>International buyer</strong><span>Buy for family in Afghanistan</span></div>
+        <div>💳 <strong>Flexible payment</strong><span>Cash, transfer and supported online payments</span></div>
+      </div>
+
+      <button class="btn btn-gold" onclick="openCheckout()">SEND TO THEIR DOOR →</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section section">
+  <div class="container">
+
+    <div class="contact-header">
+      <p class="section-kicker">VISIT KHPALWAK</p>
+      <h2>Come see us <em>in Kabul.</em></h2>
+      <p>四راهی انصاری • Kabul, Afghanistan</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card glass">
+        <div class="contact-icon">⌖</div>
+        <span>MAIN BRANCH</span>
+        <h3>Ansari Square</h3>
+        <p>چهار راهی انصاری، کابل، افغانستان</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Khpalwak+Mobiles+Ansari+Square+Kabul" target="_blank" class="btn btn-outline full">OPEN MAP</a>
+      </div>
+
+      <div class="contact-card glass">
+        <div class="contact-icon">☎</div>
+        <span>CALL / WHATSAPP</span>
+        <h3>+93 78 888 6988</h3>
+        <p>+93 70 088 6988</p>
+        <a href="tel:+93788886988" class="btn btn-gold full">CALL NOW</a>
+      </div>
+
+      <div class="contact-card glass">
+        <div class="contact-icon">✉</div>
+        <span>EMAIL</span>
+        <h3>info@khpalwakmobiles.com</h3>
+        <p>Business & product inquiries</p>
+        <a href="mailto:info@khpalwakmobiles.com" class="btn btn-outline full">SEND EMAIL</a>
+      </div>
+
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Khpalwak%20Mobiles%20Ansari%20Square%20Kabul&output=embed"
+        loading="lazy"
+        title="Khpalwak Mobiles Kabul location">
+      </iframe>
+      <div class="map-overlay">
+        <div class="map-pin">K</div>
+        <div>
+          <strong>Khpalwak Mobiles</strong>
+          <span>چهار راهی انصاری، کابل</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <p class="section-kicker">STAY CONNECTED</p>
+      <h2>Never miss the next <em>big drop.</em></h2>
+    </div>
+    <form onsubmit="subscribe(event)">
+      <input type="email" required placeholder="Your email address">
+      <button class="btn btn-gold">SUBSCRIBE</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <div class="brand">
+        <div class="brand-mark"><span>K</span><i></i></div>
+        <div><strong>KHPALWAK</strong><small>خپلواک موبایل</small></div>
+      </div>
+      <p>
+        Afghanistan's technology destination.
+        Authentic devices, expert advice and premium service.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/Khpalwak.Mobiles786" target="_blank">f</a>
+        <a href="https://www.instagram.com/khpalwak_mobiless/" target="_blank">◎</a>
+        <a href="https://www.tiktok.com/@khpalwak_mobile786" target="_blank">♪</a>
+        <a href="https://t.me/khpalwakMobiles" target="_blank">✈</a>
+      </div>
+    </div>
+
+    <div>
+      <h4>SHOP</h4>
+      <a href="#products">Smartphones</a>
+      <a href="#products">Tablets</a>
+      <a href="#products">Laptops</a>
+      <a href="#products">Audio</a>
+      <a href="#products">Accessories</a>
+    </div>
+
+    <div>
+      <h4>SUPPORT</h4>
+      <a href="#community">Community</a>
+      <a href="#calculator">Budget Calculator</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact">Delivery</a>
+      <a href="#sales">Sales</a>
+    </div>
+
+    <div>
+      <h4>CONTACT</h4>
+      <a href="tel:+93788886988">+93 78 888 6988</a>
+      <a href="tel:+93700886988">+93 70 088 6988</a>
+      <a href="mailto:info@khpalwakmobiles.com">info@khpalwakmobiles.com</a>
+      <span>چهار راهی انصاری، کابل</span>
+      <span>8:00 AM — 7:00 PM</span>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom container">
+    <span>© 2026 Khpalwak Mobiles. All rights reserved.</span>
+    <span>Built for Afghanistan 🇦🇫</span>
+  </div>
+</footer>
+
+<!-- SEARCH MODAL -->
+<div id="searchModal" class="modal">
+  <div class="modal-box search-box">
+    <button class="modal-close" onclick="closeModal('searchModal')">×</button>
+    <p class="section-kicker">SEARCH</p>
+    <h2>Find your device.</h2>
+    <input id="searchInput" class="big-input" placeholder="iPhone 17 Pro, Galaxy, iPad...">
+    <div id="searchResults"></div>
+  </div>
+</div>
+
+<!-- REGISTRATION -->
+<div id="registrationModal" class="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('registrationModal')">×</button>
+    <p class="section-kicker">COMMUNITY REGISTRATION</p>
+    <h2>Create your <em>Khpalwak ID.</em></h2>
+
+    <form id="registerForm" onsubmit="registerUser(event)">
+      <input id="regFirstName" required class="big-input" placeholder="First name">
+      <input id="regLastName" required class="big-input" placeholder="Last name">
+      <input id="regPhone" required class="big-input" type="tel" placeholder="+93 7XX XXX XXX">
+      <input id="regAddress" required class="big-input" placeholder="Address / City">
+      <label class="upload-photo">
+        📷 Add profile photo
+        <input id="regPhoto" type="file" accept="image/*" hidden>
+      </label>
+
+      <button class="btn btn-gold full">CREATE MY 8-DIGIT ID</button>
+    </form>
+
+    <div id="registrationSuccess" class="registration-success hidden">
+      <div class="success-icon">✓</div>
+      <h3>Registration complete!</h3>
+      <p>Your Khpalwak Community ID:</p>
+      <strong id="generatedID"></strong>
+      <button class="btn btn-outline full" onclick="closeModal('registrationModal')">CONTINUE</button>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div id="cartModal" class="modal">
+  <div class="modal-box cart-modal">
+    <button class="modal-close" onclick="closeModal('cartModal')">×</button>
+    <p class="section-kicker">YOUR CART</p>
+    <h2>Your <em>selection.</em></h2>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+    <button class="btn btn-gold full" onclick="openCheckout()">PROCEED TO PURCHASE</button>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkoutModal" class="modal">
+  <div class="modal-box checkout-box">
+    <button class="modal-close" onclick="closeModal('checkoutModal')">×</button>
+    <p class="section-kicker">DELIVERY & PURCHASE</p>
+    <h2>Send it <em>to their door.</em></h2>
+
+    <form onsubmit="placeOrder(event)">
+      <div class="two-inputs">
+        <input required class="big-input" id="customerName" placeholder="Buyer full name">
+        <input required class="big-input" id="customerPhone" placeholder="Buyer phone">
+      </div>
+
+      <input required class="big-input" id="deliveryRecipient" placeholder="Recipient full name">
+      <input required class="big-input" id="deliveryPhone" placeholder="Recipient phone">
+      <input required class="big-input" id="deliveryAddress" placeholder="Delivery address">
+      <input class="big-input" id="deliveryCity" placeholder="City / Province">
+
+      <select class="big-input" id="paymentMethod" required>
+        <option value="">Select payment method</option>
+        <option>YouPay / Online payment</option>
+        <option>Bank transfer</option>
+        <option>Cash on delivery — Kabul</option>
+        <option>Contact Khpalwak for international payment</option>
+      </select>
+
+      <label class="terms-check">
+        <input type="checkbox" required>
+        I confirm that the information is correct.
+      </label>
+
+      <button class="btn btn-gold full">SEND ORDER REQUEST →</button>
+    </form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
